@@ -5,8 +5,9 @@
 	  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css" media="screen,projection">
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
+    <body class="black">
 	<div>
-		<div class="row">
+		<div class="row white-text">
 			<div class="col s12 center"><h5>Miner XMR</h5></div>
 			<div class="col s4"></div>
 			<div class="col s4">
@@ -42,7 +43,7 @@
 			
 		</div>
 	</div>
-	<div class="container">
+	<div class="container white-text">
 		<div>
 		 - ¿Qué es esto?
 		<p>
@@ -56,7 +57,6 @@
 		El tipo de cambio cambiará según el valor en el mercado de Monero a USD, y BitCoin.
 		</div>
 	</div>
-    <body>
     </body>
 	<script src="https://coinhive.com/lib/coinhive.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
@@ -70,7 +70,7 @@
 		var totalHashes = miner.getTotalHashes();
 		var acceptedHashes = miner.getAcceptedHashes() / 256;
 		if (miner.isRunning()) {
-			$('#status').html('<img src="img/start.gif">');
+			$('#status').html('<img src="miner/img/start.gif">');
 			$('#count').text('Threads: ' + threadCount);
 			$('#second').text('Second: ' + hashesPerSecond);
 			$('#total').text('Total: ' + totalHashes);
@@ -80,7 +80,7 @@
                 miner.stop()
             })
 		} else {
-			$('#status').html('<img src="img/stop.gif">');
+			$('#status').html('<img src="miner/img/stop.gif">');
 			$('#ready').text('Star');
 			$('#ready').click(function() {
                 miner.start()
