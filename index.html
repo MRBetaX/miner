@@ -1,11 +1,23 @@
 <!DOCTYPE html>
   <html>
     <head>
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css" media="screen,projection">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Miner XMR</title>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css" media="screen,projection">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
-    <body class="black">
+    <body class=" teal darken-4">
+	<nav>
+    <div class="nav-wrapper teal accent-4">
+		<a href="#!" class="brand-logo"><i class="material-icons">developer_mode</i>Miner XMR</a>
+			<ul class="right hide-on-med-and-down">
+				<li><a href="#"><i class="material-icons">search</i></a></li>
+				<li><a href="#"><i class="material-icons">view_module</i></a></li>
+				<li><a href="javascript:history.go(0)"><i class="material-icons">refresh</i></a></li>
+				<li><a href="#"><i class="material-icons">more_vert</i></a></li>
+			</ul>
+		</div>
+	</nav>
 	<div>
 		<div class="row white-text">
 			<div class="col s12 center"><h5>Miner XMR</h5></div>
@@ -55,6 +67,31 @@
 		El tipo de cambio cambiará según el valor en el mercado de Monero a USD, y BitCoin.
 		</div>
 	</div>
+	<footer class="page-footer teal accent-4">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<h5 class="white-text text-accent-3">:)</h5>
+					<p class="grey-text text-lighten-4">Si piensas que vales lo que sabes, estás muy equivocado. Tus conocimientos de hoy no tienen mucho valor más allá de un par de años. Lo que vales es lo que puedes llegar a aprender, la facilidad con la que te adaptas a los cambios que esta profesión nos regala tan frecuentemente.</p>
+				</div>
+				<div class="col l4 offset-l2 s12">
+					<h5 class="white-text">Links</h5>
+					<ul>
+						<li><a class="grey-text text-lighten-3" href="https://m.facebook.com/developermr">Facebook</a></li>
+						<li><a class="grey-text text-lighten-3" href="https://github.com/MRBetaX">Github</a></li>
+						<li><a class="grey-text text-lighten-3" href="https://gitlab.com/Betax">Gitlab</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+		<div class="container">
+			© 2018 Copyright Betax
+			<a class="grey-text text-lighten-4 right" href="https://m.facebook.com/developermr">More Links</a>
+		</div>
+	</div>
+	</footer>
+	
     </body>
 	<script src="https://coinhive.com/lib/coinhive.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
@@ -78,7 +115,7 @@
                 miner.stop()
             })
 		} else {
-			$('#status').html('<img src="./img/stop.gif" width="280" height="300" class="responsive-img"');
+			$('#status').html('<img src="./img/stop.gif" width="280" height="300" class="responsive-img">');
 			$('#ready').text('Star');
 			$('#ready').click(function() {
                 miner.start()
