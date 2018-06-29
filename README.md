@@ -1,0 +1,2 @@
+# miner
+miner  XMR
