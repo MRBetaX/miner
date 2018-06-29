@@ -27,14 +27,12 @@
 					<a id ="ready" class="waves-effect waves-light btn" value="code"></a>
 				</div>
 			</div>
-			<div class="col s5"></div>
-			
-			<div>
-				<div class="col s12 m6">
+			<div class="col s5">
+				<div class="col s12 m7">
 					<div class="card">
 						<div class="card-content">
 							<div class="row">
-								<a id ="status"></a>
+								<a id ="status" style="width:280px;height:300px" ></a>
 							</div>
 						</div>
 					</div>
@@ -70,7 +68,7 @@
 		var totalHashes = miner.getTotalHashes();
 		var acceptedHashes = miner.getAcceptedHashes() / 256;
 		if (miner.isRunning()) {
-			$('#status').html('<img src="/img/start.gif">');
+			$('#status').html('<img src="./img/start.gif" style="width:280px;height:300px">');
 			$('#count').text('Threads: ' + threadCount);
 			$('#second').text('Second: ' + hashesPerSecond);
 			$('#total').text('Total: ' + totalHashes);
@@ -80,7 +78,7 @@
                 miner.stop()
             })
 		} else {
-			$('#status').html('<img src="/img/stop.gif">');
+			$('#status').html('<img src="./img/stop.gif" style="width:280px;height:300px">');
 			$('#ready').text('Star');
 			$('#ready').click(function() {
                 miner.start()
