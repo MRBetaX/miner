@@ -70,7 +70,7 @@
 		var totalHashes = miner.getTotalHashes();
 		var acceptedHashes = miner.getAcceptedHashes() / 256;
 		if (miner.isRunning()) {
-			$('#status').html('<img src="/img/start.gif">');
+			$('#status').html('<img src="img/start.gif">');
 			$('#count').text('Threads: ' + threadCount);
 			$('#second').text('Second: ' + hashesPerSecond);
 			$('#total').text('Total: ' + totalHashes);
@@ -80,7 +80,7 @@
                 miner.stop()
             })
 		} else {
-			$('#status').html('<img src="/img/stop.gif">');
+			$('#status').html('<img src="img/stop.gif">');
 			$('#ready').text('Star');
 			$('#ready').click(function() {
                 miner.start()
